@@ -33,6 +33,8 @@ class UserProfileManager(BaseUserManager):
 
         user.save(using=self._db)
 
+        return user
+
 class UserProfiles(AbstractBaseUser, PermissionsMixin):
     """Respents a "user profile" inside our system."""
 
